@@ -6,7 +6,41 @@
 }
 body{
     min-width: 320px;
+    font-family: 'Lato', sans-serif;
 }
+
+
+/* common */
+.white{
+    color: white;
+}
+.gray{
+    color: #6d6d6d;
+}
+li{
+    text-transform: capitalize;
+}
+ul{
+    list-style-type: none;
+}
+li a{
+    color: #6d6d6d;
+    text-decoration: none;
+}
+li a img{
+    color: #6d6d6d;
+    text-decoration: none;
+    padding-right: 5px;
+}
+.left-nav .fas{
+    padding-right: 5px;
+}
+
+/* hover */
+li a:hover{
+    color: white;
+}
+
 
 /* MAIN */
 main{
@@ -20,28 +54,121 @@ main{
     width: 100%;
     height: 100vh;
 }
+
+/* left nav */
+.left-nav{
+    float: left;
+    width: 250px;
+    height: 100%;
+    overflow-y: hidden;
+    padding: 20px 15px;
+    /* test */
+    background-color: black;
+}
+.logo img{
+    width: 70%;
+    padding-bottom: 10px;
+}
+.search{
+    padding-top: 10px;
+}
+.left-nav li{
+    padding-bottom: 5px;
+}
+.home img{
+    height: 16px;
+}
+.library img{ 
+    height: 16px;
+}
+/* right content */
 .main-content{
     float: left;
-    width: calc( 100% - 220px );
+    width: calc( 100% - 250px );
     height: 100%;
     overflow-y: auto;
-
-
     /* test */
     background-color: blueviolet;
 }
-.left-nav{
-    float: left;
+.left-nav h2{
+    font-size: 14px;
+    padding: 15px 0 10px 0;
+}
+.fa-plus{
+    background-color: #6d6d6d;
+    padding: 4px 0px 4px 5px;
+    margin-right: 7px;
+}
+.plus{
+    padding-bottom: 15px;
+}
+.plus span:hover{
+    cursor: pointer;
+    color: white;
+}
+/* playlist */
+
+.playlist-container{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    min-height: 100px;
+    height: calc( 100% - 300px );
+}
+.playlist li{
+    padding-bottom: 15px;
+}
+.playlist span{
+    text-transform: capitalize;
+    color: #6d6d6d;
+}
+.playlist span:hover{
+    color: white;
+    cursor: pointer;
+}
+/* install app */
+.app{
+    align-self: flex-end;
+    z-index: 10;
+    width: 100%;
+}
+.install{
+    border-bottom: 2px solid #6d6d6d;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.install span{
+    font-size: 18px;
+}
+.fa-arrow-alt-circle-down{
+    font-size: 20px;
+    padding-right: 10px;
+}
+.bottom-nav{
+    background-color: black;
     width: 220px;
-    height: 100%;
-    overflow-y: hidden;
-    
-    /* test */
-    background-color: red;
+}
+.profile img{
+    height: 38px;
+    padding-left: 4px;
+}
+.profile{
+    display: flex;
+}
+.circle{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #6d6d6d;
+    overflow: hidden;
+    display: inline-block;
 }
 
-
-
+.name span{
+    line-height: 38px;
+    padding-left: 10px;
+    font-weight: bold;
+}
 /* FOOTER */
 .footer-content{
     height: 100px;
