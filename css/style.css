@@ -320,7 +320,6 @@ sub{
     display: flex;
     max-width: 250px;
     color: gray;
-    flex-grow: 1;
 }
 .left span{
     padding: 0 5px;
@@ -339,7 +338,7 @@ sub{
 }
 /* footer center */
 .center{
-    flex-grow: 3;
+    flex-grow: 1;
     width: 250px;
 }
 .play{
@@ -363,8 +362,9 @@ sub{
     align-items: center;
 }
 
-.progress span{
+.progress span {
     color: gray;
+    margin: 0 20px;
 }
 .progress-bar{
     flex-grow: 1;
@@ -373,6 +373,7 @@ sub{
     display: inline-flex;
     align-items: center;
     border-radius: 5px;
+    /* max-width: 1100px; */
 
 }
 .green-bar{
@@ -408,11 +409,10 @@ footer .circle{
 }
 /* footer right */
 .right{
+    margin-right: 20px;
     height: 100%;
-    width: 200px;
-    flex-grow: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 .right .action-icon{
@@ -472,7 +472,7 @@ footer .circle{
         display: inline-flex;
     }
     .banner-fix{
-        width: calc( 100% - 50px );
+        width: calc( 100% - 45px );
     }
 
     .short-list li{
@@ -483,9 +483,7 @@ footer .circle{
     }
     .main-content{
         padding: 20px;
-    }
-    .right{
-        justify-content: center;
+        padding-top: 80px;
     }
     .footer.right .action-icon .fas{
         font-size: 10px;
