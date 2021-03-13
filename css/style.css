@@ -68,6 +68,47 @@ li a:hover{
 .progress-bar:hover .green-bar{
     visibility: visible;
 }
+.button:hover{
+    padding: 15px 25px;
+    top: 15%;
+}
+ul li:hover .layover{
+    visibility: visible;
+}
+.fa-play-circle:hover{
+    font-size: 38px;
+}
+.main-content .nav-list ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* layover img */
+.layover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+.img-circle .layover{
+    border-radius: 50%;
+}
+.layover::before{
+    font-family: 'font awesome 5 free';
+    content: "\f144";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 60px;
+}
+.rel-layover{
+    position: relative;
+}
 
 /* fixed banner */
 .banner-fix{
@@ -82,8 +123,8 @@ li a:hover{
 .button{
     position: absolute;
     right: 20px;
-    top: 15%;
-    padding: 15px 25px;
+    top: 20%;
+    padding: 10px 20px;
     border: 1px solid white;
     color: white;
     border-radius: 25px;
@@ -159,11 +200,12 @@ main::after{
     padding-bottom: 10px;
     overflow: hidden;
 }
-.search{
-    padding-top: 10px;
-}
+
 .left-nav li{
     padding-bottom: 5px;
+}
+.search img{
+    height: 16px;
 }
 .home img{
     height: 16px;
@@ -275,6 +317,7 @@ main::after{
 }
 .recently-played li img , .short-list li img{
     width: 100%;
+    overflow: hidden;
 }
 .recently-played li , .short-list li{
     font-weight: bold;
