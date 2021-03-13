@@ -532,4 +532,16 @@ footer .circle{
         font-size: 10px;
         padding: 0 5px;
     }
+    .search img{
+        height: 28px;
+    }
+    .home img{
+        height: 28px;
+    }
+    .library img{ 
+        height: 28px;
+    }
+    .logo-small img{
+        height: 34px;
+    }
 }
