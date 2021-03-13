@@ -104,6 +104,43 @@ main::after{
     display: table;
     clear: both;
 }
+/* burger-nav */
+.flex{
+    display: flex;
+    height:  100%;
+}
+.app-wrapper.xs {
+    visibility: hidden;
+    height:  100%;
+}
+.app-wrapper.xs ul .logo{
+    width: 38px;
+    margin: auto;
+    padding-bottom: 25px;
+}
+.app-wrapper.xs ul .logo img{
+    width: 100%;
+}
+.app-wrapper.xs .home img{
+    height: 28px;
+}
+.app-wrapper.xs .library img{ 
+    height: 28px;
+}
+.app-wrapper.xs{
+    width: 50px;
+    background-color: black;
+}
+.app-wrapper.xs ul{
+    text-align: center;
+}
+.app-wrapper.xs ul li{
+    padding-bottom: 15px;
+}
+.app-wrapper.xs .fa-search{
+    font-size: 28px;
+    color: white;
+}
 
 /* left nav */
 .left-nav{
@@ -203,11 +240,10 @@ main::after{
 /* right content */
 .main-content{
     float: left;
-    width: calc( 100% - 250px );
+    width: 100%;
     height: 100%;
     overflow-y: auto;
     color: white;
-    padding: 20px;
     padding-top: 80px;
 
 }
@@ -225,41 +261,46 @@ main::after{
 .recently-played{
     padding-top: 20px;
 }
-.recently-played h2 , .for-john h2{
+.recently-played h2 , .short-list h2{
     font-size: 35px;
     padding-top: 15px;
 }
-.recently-played ul , .for-john ul{
+.recently-played ul , .short-list ul{
     display: inline-flex;
+    flex-wrap: wrap;
     padding-top: 20px;
 }
 .recently-played li {
-    width: calc( 100% / 1 );
+    width: calc( 100% / 6 );
 }
-.recently-played li img {
+.recently-played li img , .short-list li img{
     width: 100%;
 }
-.recently-played li , .for-john li{
+.recently-played li , .short-list li{
     font-weight: bold;
     padding-right: 20px;
     text-align: center;
 }
-.recently-played ul li span sub{
+sub{
     vertical-align: top;
-    font-size: 15px;
+    font-size: 12px;
     color: gray;
 }
-/* .for-john{
-    
-} */
-.for-john ul{
+.short-list ul{
     width: 100%;
 }
-.for-john li{
+.short-list li{
     width: calc( 100% / 6 );
 }
-.for-john li img{
+.short-list h2{
+    padding-top: 30px;
+}
+.img-circle{
+    overflow: hidden;
+}
+.img-circle img{
     width: 100%;
+    border-radius: 50%;
 }
 /* FOOTER */
 
@@ -273,6 +314,7 @@ main::after{
     height: 100px;
     background-color: #282828;
     padding: 17px 10px;
+    z-index: 30;
 }
 /* footer left */
 .left{
@@ -386,4 +428,62 @@ footer .circle{
 }
 .right .progress-bar{
     width: 50%;
+}
+/* MEDIA QUERIES */
+/* responsive lg */
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .recently-played li {
+        width: calc( 100% / 4 );
+    }
+    .short-list li{
+        width: calc( 100% / 4 );
+    }
+}
+/* responsive md */
+@media screen and (min-width: 568px) and (max-width: 768px){
+    .recently-played .stranger{
+        font-size: 10px;
+    }
+    .recently-played .stranger sub{
+        font-size: 9px;
+    }
+    .short-list li{
+        width: calc( 100% / 4 );
+    }
+}
+/* responsive s */
+@media screen and (min-width: 639px) and (max-width: 768px){
+    .recently-played li {
+        width: calc( 100% / 2 );
+    }
+    .short-list li{
+        width: calc( 100% / 2 );
+    }
+}
+/* responsive xs */
+@media screen and (max-width: 638px){
+    .recently-played li {
+        width: calc( 100% / 2 );
+    }
+    .left-nav{
+        display: none;
+    }
+}
+@media screen and (max-width: 638px){
+    .flex {
+        display: inline-flex;
+    }
+    .banner-fix{
+        width: calc( 100% - 50px );
+    }
+
+    .short-list li{
+        width: calc( 100% / 2 );
+    }
+    .app-wrapper.xs{
+        visibility: visible;
+    }
+    .main-content{
+        padding: 20px;
+    }
 }
